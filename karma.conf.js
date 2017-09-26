@@ -56,7 +56,7 @@ module.exports = function karma(config) {
 
     customLaunchers: {
       Chrome_travis: {
-        base: 'Chrome',
+        base: 'ChromeHeadless',
         flags: ['--no-sandbox'],
       },
     },
@@ -74,7 +74,7 @@ module.exports = function karma(config) {
     ],
 
     browsers: [
-      process.env.TRAVIS ? 'Chrome_travis' : 'Chrome',
+      process.env.TRAVIS ? 'Chrome_travis' : 'ChromeHeadless',
       'Firefox',
     ],
 
